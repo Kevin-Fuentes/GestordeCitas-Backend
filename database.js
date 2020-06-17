@@ -1,7 +1,7 @@
 const mongoose= require('mongoose')
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/veterinaria',{
+mongoose.connect('mongodb+srv://root:root@cluster0-suo1l.mongodb.net/veterinaria?retryWrites=true&w=majority',{
      useNewUrlParser:true,
      useUnifiedTopology:true,
      useFindAndModify:false
