@@ -19,7 +19,7 @@ callback(new Error('No Permitido por CORS'))
 } 
 }
 
-const port = process.env.port || 4000
+const port = process.env.PORT || 4000
 
 app.use(cors())
 
