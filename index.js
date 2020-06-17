@@ -19,6 +19,7 @@ callback(new Error('No Permitido por CORS'))
 } 
 }
 
+const port = process.env.port || 4000
 
 app.use(cors())
 
@@ -27,4 +28,6 @@ require('./database')
 app.use(bodyPasser.json())
 app.use(bodyPasser.urlencoded({extended:true}))
 app.use('/',router())
-app.listen(4000,()=>{console.log('conectado')})
+app.listen(port,'0.0.0.0',()=>{
+     console.log('Conectado en el puerto:',port)
+})
